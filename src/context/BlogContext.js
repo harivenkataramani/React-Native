@@ -29,14 +29,20 @@ const deleteBlogPost = (dispatch) => {
 };
 
 const addBlogPost = (dispatch) => {
-  return (title, content) => {
+  return (title, content, callback) => {
     dispatch({ type: "add_blogpost", payload: { title, content } });
+    if(callback){
+        callback()
+    }
   };
 };
 
 const editBlogPost = (dispatch) => {
-  return (title, content, id) => {
+  return (title, content, id, callback) => {
     dispatch({ type: "edit_blogpost", payload: { title, content, id } });
+    if(callback){
+        callback()
+    }
   };
 };
 

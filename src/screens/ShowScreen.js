@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import {
   View,
   Text,
-  FlatList,
-  Button,
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
